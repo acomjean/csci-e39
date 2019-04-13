@@ -1,0 +1,14 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+
+body {
+    background: #f0f6ff;
+    font-family: "Arial", sans-serif;
+    color: #060606;
+}
