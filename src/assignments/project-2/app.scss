@@ -15,11 +15,16 @@ footer,header,hgroup,menu,nav,section {
 
 
 // starting styles
+html {
+	font-size: 16px;
+}
 
 body {
   background: $background-color;
   font-family: "Arial", sans-serif;
   color: #060606;
+  border: 0;
+  margin: 0;
 }
 
 ul{
@@ -32,5 +37,37 @@ ul{
   li:nth-of-type(2n) {
     background-color: $li_alt_color;
   }
+}
 
+.container {
+    display: grid;
+	grid-template-columns: 0.2fr 1fr;
+    grid-template-rows: 0.3fr 1fr 0.2fr;
+    grid-template-areas: 
+        "header header"
+        "sidebar main"
+        "footer footer";
+    border: black;
+}
+
+header {
+    grid-area: header;
+    background-color: $background-color;
+	color: $primary-gray;
+	text-align: center;
+}
+
+nav {
+    grid-area: sidebar;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+    background-color: $background-color;
+	color: $primary-gray;
+	text-align: center;
 }
